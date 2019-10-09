@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <RootNamespace>csharp_image_processing</RootNamespace>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MaterialDesignThemes" Version="2.6.0" />
+    <PackageReference Include="sqlite-net-pcl" Version="1.6.292" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Model\Services\" />
+  </ItemGroup>
+
+</Project>
