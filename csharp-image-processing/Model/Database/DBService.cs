@@ -9,6 +9,7 @@ namespace csharp_image_processing.Model.Database
 
         public DBService()
         {
+            //verifica se existe o banco
             if (DB == null)
                 DB = DBGetConnection.GetConnection();
 
