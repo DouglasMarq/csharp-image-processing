@@ -58,7 +58,7 @@
                     Orientation="Horizontal"
                     VerticalAlignment="Center">
             <ToggleButton Style="{StaticResource MaterialDesignSwitchLightToggleButton}"
-                          IsChecked="True"
+                          IsChecked="False"
                           x:Name="ToggleRes"/>
             <Label Content="Verificar Resultado?"/>
         </StackPanel>

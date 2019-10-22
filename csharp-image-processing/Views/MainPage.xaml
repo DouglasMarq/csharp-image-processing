@@ -4,6 +4,14 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:csharp_image_processing.Views"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal" 
+        TextOptions.TextRenderingMode="Auto"        
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}"
         mc:Ignorable="d"
         ResizeMode="NoResize"
         WindowStartupLocation="CenterScreen"
@@ -11,16 +19,92 @@
     <Grid>
         <Grid.ColumnDefinitions >
             <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="400" />
-            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="600" />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
         <StackPanel Orientation="Horizontal"
                     Grid.Column="1">
-            <GridSplitter Width="2" IsEnabled="False"></GridSplitter>
-
+            <GridSplitter Width="2" IsEnabled="False"/>
         </StackPanel>
+        <!--///////////////////////-->
+
+        <ScrollViewer VerticalScrollBarVisibility="Auto" 
+                      CanContentScroll="True"
+                      Grid.Column="2">
+            <materialDesign:Card
+            Background="{DynamicResource MaterialDesignBackground}"
+            Margin="10">
+                <StackPanel>
+                    <Expander HorizontalAlignment="Stretch"
+                          Header="Expander Example 2a">
+                        <StackPanel Orientation="Vertical"
+                                TextBlock.Foreground="{DynamicResource MaterialDesignBody}"
+                                Margin="24,8,24,16">
+                            <TextBlock Text="Your Content" />
+                            <TextBlock Opacity=".68"
+                                   Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                                   TextWrapping="Wrap" />
+                        </StackPanel>
+                    </Expander>
+                    <Border Background="{DynamicResource MaterialDesignDivider}"
+                        Height="1"
+                        HorizontalAlignment="Stretch"
+                        SnapsToDevicePixels="True" />
+                    <Expander HorizontalAlignment="Stretch"
+                          Header="Expander Example 2b">
+                        <StackPanel Orientation="Vertical"
+                                TextBlock.Foreground="{DynamicResource MaterialDesignBody}"
+                                Margin="24,8,24,16">
+                            <TextBlock Text="Your Content" />
+                            <TextBlock Opacity=".68"
+                                   Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                                   TextWrapping="Wrap" />
+                        </StackPanel>
+                    </Expander>
+                    <Border Background="{DynamicResource MaterialDesignDivider}"
+                        Height="1"
+                        HorizontalAlignment="Stretch"
+                        SnapsToDevicePixels="True" />
+                    <Expander HorizontalAlignment="Stretch"
+                          Header="Expander Example 2c">
+                        <StackPanel Orientation="Vertical"
+                                TextBlock.Foreground="{DynamicResource MaterialDesignBody}"
+                                Margin="24,8,24,16">
+                            <TextBlock Text="Your Content" />
+                            <TextBlock Opacity=".68"
+                                   Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                                   TextWrapping="Wrap" />
+                        </StackPanel>
+                    </Expander>
+                </StackPanel>
+            </materialDesign:Card>
+        </ScrollViewer>
+
+        <!--///////////////////////-->
+        <Grid Grid.Column="0"
+              VerticalAlignment="Stretch"
+              HorizontalAlignment="Stretch">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <StackPanel Grid.Column="0" Grid.Row="0">
+                <Button Margin="10, 15, 10, 255"
+                        Padding="0"
+                        Content="Agrotóxicos"/>
+                <Button Margin="10"
+                        Padding="0"
+                        Content="Registrar Digital"
+                        VerticalAlignment="Bottom"
+                        />
+                <Button Margin="10"
+                        Padding="0"
+                        Content="Sair"/>
+            </StackPanel>
+        </Grid>
     </Grid>
 </Window>
