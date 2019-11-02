@@ -19,15 +19,17 @@ namespace csharp_image_processing.Views
         private MainWindowViewModel _ctx = new MainWindowViewModel();
         //mainpage
         private MainPage mp;
+        private object _content;
 
         //construtor
         public MainWindow()
         {
             InitializeComponent();
             DataContext = _ctx;
-            Title = "Autenticação";
+            _content = Content;
             entryLogin.Focus();
         }
+
 
         private async void btnLogin_Click(object sender, RoutedEventArgs e)
         {
@@ -48,7 +50,8 @@ namespace csharp_image_processing.Views
             else
             {
                 //se for OK ele muda o content da página
-                mp = new MainPage();
+                mp = new MainPage(entryLogin.Text, entryPass.Password);
+                mp.ChangeContent += Mp_ChangeContent;
                 Width = 800;
                 Height = 450;
                 Left = (SystemParameters.PrimaryScreenWidth / 2) - (Width / 2);
@@ -58,12 +61,49 @@ namespace csharp_image_processing.Views
             }
         }
 
+        private void Mp_ChangeContent(object sender, EventArgs e)
+        {
+            ((App)App.Current).Dispatcher.Invoke(() => {
+                entryLogin.Text = string.Empty;
+                entryPass.Password = string.Empty;
+                Height = 370;
+                Width = 300;
+                Left = (SystemParameters.PrimaryScreenWidth / 2) - (Width / 2);
+                Top = (SystemParameters.PrimaryScreenHeight / 2) - (Height / 2);
+                Title = "Autenticação";
+                Content = _content;
+            });
+        }
+
         private async void btnBio_Click(object sender, RoutedEventArgs e)
         {
             var res = await _ctx.AuthenticateBio(ToggleRes.IsChecked);
             if(res == "OK")
             {
-                mp = new MainPage();
+                mp = new MainPage("user", "1234");
+                mp.ChangeContent += Mp_ChangeContent;
+                Width = 800;
+                Height = 450;
+                Left = (SystemParameters.PrimaryScreenWidth / 2) - (Width / 2);
+                Top = (SystemParameters.PrimaryScreenHeight / 2) - (Height / 2);
+                Title = "Controle Central";
+                Content = mp.Content;
+            }
+            else if (res == "ADMIN")
+            {
+                mp = new MainPage("admin", "1234");
+                mp.ChangeContent += Mp_ChangeContent;
+                Width = 800;
+                Height = 450;
+                Left = (SystemParameters.PrimaryScreenWidth / 2) - (Width / 2);
+                Top = (SystemParameters.PrimaryScreenHeight / 2) - (Height / 2);
+                Title = "Controle Central";
+                Content = mp.Content;
+            }
+            else if (res == "DIRETOR")
+            {
+                mp = new MainPage("diretor", "1234");
+                mp.ChangeContent += Mp_ChangeContent;
                 Width = 800;
                 Height = 450;
                 Left = (SystemParameters.PrimaryScreenWidth / 2) - (Width / 2);

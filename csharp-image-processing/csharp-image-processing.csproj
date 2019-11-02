@@ -22,10 +22,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="Resources\Images\biometria.jpg">
+    <None Update="Resources\Images\digitaladmin.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Resources\Images\digital.jpg">
+    <None Update="Resources\Images\digitalDiretor.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Images\DigitalUser.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>

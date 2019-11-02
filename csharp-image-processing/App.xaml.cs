@@ -1,6 +1,8 @@
 ﻿using csharp_image_processing.Model.Database;
 using csharp_image_processing.Model.Entidades;
+using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Controls;
 
 namespace csharp_image_processing
 {
@@ -24,6 +26,23 @@ namespace csharp_image_processing
                 };
                 //inserção da credencial no banco
                 new AccessLogin().Insert(lg);
+
+                Login lg2 = new Login()
+                {
+                    Id = new AccessLogin().Count() + 1,
+                    User = "user",
+                    Pass = "1234",
+                    AccessLevel = 1,
+                };
+                new AccessLogin().Insert(lg2);
+                Login lg3 = new Login()
+                {
+                    Id = new AccessLogin().Count() + 1,
+                    User = "diretor",
+                    Pass = "1234",
+                    AccessLevel = 2,
+                };
+                new AccessLogin().Insert(lg3);
             }
             base.OnStartup(e);
         }

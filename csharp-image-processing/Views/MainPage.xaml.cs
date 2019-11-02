@@ -18,16 +18,51 @@ namespace csharp_image_processing.Views
     /// </summary>
     public partial class MainPage : Window
     {
-        private MainPageViewModel _ctx = new MainPageViewModel();
-        private object _content;
+        private MainPageViewModel _ctx;
+        private static string _user;
+        private static string _pass;
+        public event EventHandler ChangeContent;
 
-        public MainPage()
+        public MainPage(string user, string pass)
         {
             InitializeComponent();
+            _user = user;
+            _pass = pass;
+            _ctx = new MainPageViewModel(_user, _pass);
             DataContext = _ctx;
-            _content = this.Content;
+            switch (_ctx.AccessLevel)
+            {
+                case 1:
+                    XpanderLevelOne.Visibility = Visibility.Visible;
+                    XpanderLevelTwo.Height = 0;
+                    XpanderLevelTwo.Visibility = Visibility.Hidden;
+                    XpanderLevelThree.Height = 0;
+                    XpanderLevelThree.Visibility = Visibility.Hidden;
+                    break;
+                case 2:
+                    XpanderLevelOne.Visibility = Visibility.Visible;
+                    XpanderLevelTwo.Visibility = Visibility.Visible;
+                    XpanderLevelThree.Height = 0;
+                    XpanderLevelThree.Visibility = Visibility.Hidden;
+                    break;
+                case 3:
+                    XpanderLevelOne.Visibility = Visibility.Visible;
+                    XpanderLevelTwo.Visibility = Visibility.Visible;
+                    XpanderLevelThree.Visibility = Visibility.Visible;
+                    break;
+                default:
+                    XpanderLevelOne.Visibility = Visibility.Visible;
+                    XpanderLevelTwo.Height = 0;
+                    XpanderLevelTwo.Visibility = Visibility.Hidden;
+                    XpanderLevelThree.Height = 0;
+                    XpanderLevelThree.Visibility = Visibility.Hidden;
+                    break;
+            }
         }
 
-
+        private void btnExit_Click(object sender, RoutedEventArgs e)
+        {
+            ChangeContent?.Invoke(this, null);
+        }
     }
 }

@@ -38,7 +38,8 @@
             Margin="10">
                 <StackPanel>
                     <Expander HorizontalAlignment="Stretch"
-                          Header="Expander Example 2a">
+                              x:Name="XpanderLevelOne"
+                          Header="Informações Públicas">
                         <StackPanel Orientation="Vertical"
                                 TextBlock.Foreground="{DynamicResource MaterialDesignBody}"
                                 Margin="24,8,24,16">
@@ -53,7 +54,8 @@
                         HorizontalAlignment="Stretch"
                         SnapsToDevicePixels="True" />
                     <Expander HorizontalAlignment="Stretch"
-                          Header="Expander Example 2b">
+                              x:Name="XpanderLevelTwo"
+                          Header="Informações Particulares">
                         <StackPanel Orientation="Vertical"
                                 TextBlock.Foreground="{DynamicResource MaterialDesignBody}"
                                 Margin="24,8,24,16">
@@ -68,7 +70,8 @@
                         HorizontalAlignment="Stretch"
                         SnapsToDevicePixels="True" />
                     <Expander HorizontalAlignment="Stretch"
-                          Header="Expander Example 2c">
+                              x:Name="XpanderLevelThree"
+                          Header="Informações Restritas">
                         <StackPanel Orientation="Vertical"
                                 TextBlock.Foreground="{DynamicResource MaterialDesignBody}"
                                 Margin="24,8,24,16">
@@ -93,17 +96,14 @@
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
             <StackPanel Grid.Column="0" Grid.Row="0">
-                <Button Margin="10, 15, 10, 255"
+                <Button Margin="10, 15, 10, 295"
                         Padding="0"
                         Content="Agrotóxicos"/>
                 <Button Margin="10"
                         Padding="0"
-                        Content="Registrar Digital"
-                        VerticalAlignment="Bottom"
-                        />
-                <Button Margin="10"
-                        Padding="0"
-                        Content="Sair"/>
+                        Content="Sair"
+                        x:Name="btnExit"
+                        Click="btnExit_Click"/>
             </StackPanel>
         </Grid>
     </Grid>
