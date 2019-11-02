@@ -86,31 +86,35 @@ namespace csharp_image_processing.ViewModels
             if (openFileDialog.ShowDialog() == true)
             {
                 //pego o arquivo que selecionei
-                var filePath = Path.GetFullPath(openFileDialog.FileName);
+                var filePath = Path.GetFullPath(openFileDialog.FileName);                
                 //arquivos da pasta images
                 var files = Directory.GetFiles(Path.GetDirectoryName(System.Diagnostics.Process.GetCurrentProcess().MainModule.FileName) + "\\Resources\\Images");
                 //SURF - Speeded Up Robust Features
                 var detector = SURF.Create(hessianThreshold: 400);
                 //Source -- arquivo que escolhi e transformo ele em cinza
                 Mat src = new Mat(filePath, ImreadModes.Grayscale);
+                Mat resSrc = new Mat();
+                Cv2.Resize(src, resSrc, new Size(250, 250));
                 //aqui é o matcher -- COMPARADOR
                 var matcher = new BFMatcher();
                 foreach (var item in files)
                 {
                     //arquivo destinatario
                     Mat dst = new Mat(item, ImreadModes.Grayscale);
+                    Mat resDst = new Mat();
+                    Cv2.Resize(dst, resDst, new Size(250, 250));
                     // Keypoints - são as bolinhas
-                    var keypoints1 = detector.Detect(src);
-                    var keypoints2 = detector.Detect(dst);
+                    var keypoints1 = detector.Detect(resSrc);
+                    var keypoints2 = detector.Detect(resDst);
                     // --------------------
                     if (keypoints1.Length == keypoints2.Length)
                     {
                         if (check ?? false)
                         {
-                            var matches = matcher.Match(src, dst);
+                            var matches = matcher.Match(resSrc, resDst);
                             var imgMatches = new Mat();
                             //desenha as linhas entre os keypoints
-                            Cv2.DrawMatches(src, keypoints1, dst, keypoints2, matches, imgMatches);
+                            Cv2.DrawMatches(resSrc, keypoints1, resDst, keypoints2, matches, imgMatches);
                             Cv2.ImShow("Matches", imgMatches);
                         }
                         return Task.FromResult("OK");
