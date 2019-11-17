@@ -43,9 +43,20 @@
                         <StackPanel Orientation="Vertical"
                                 TextBlock.Foreground="{DynamicResource MaterialDesignBody}"
                                 Margin="24,8,24,16">
-                            <TextBlock Text="Your Content" />
+
+                            <TextBlock Text="Mancozebe" />
                             <TextBlock Opacity=".68"
-                                   Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                                   Text="O mancozebe pertence ao grupo dos ditiocarbamatos e, mais especificamente, à classe dos compostos conhecidos como etilenobisditiocarbamatos. Cada partícula do Mancozebe é composta por uma camada externa rica em zinco, envolvendo um núcleo central de EBDC polimericamente estruturado. Essa é uma estrutura extremamente estável e a baixa solubilidade da camada externa de zinco significa que o EBDC pode passar através dessa camada e ser depositada na superfície foliar em uma taxa controlada.
+
+Esse período de proteção das folhas passa por uma liberação controlada que auxilia na regulação da duração na eficiência do fungicida e aumenta o período de proteção. Logicamente, para resultar em melhor controle, uma camada contínua, ou barreira de mancozebe, deve estar presente na superfície foliar."
+                                   TextWrapping="Wrap" />
+                            <Border Background="{DynamicResource MaterialDesignDivider}"
+                                Height="1"
+                                HorizontalAlignment="Stretch"
+                                SnapsToDevicePixels="True" />
+                            <TextBlock Text="Glifosato" />
+                            <TextBlock Opacity=".68"
+                                   Text="É um herbicida sistêmico de amplo espectro e dessecante de culturas. É um composto organofosforado, especificamente um fosfonato. É usado para matar ervas daninhas, especialmente as folhosas perenes e gramíneas que competem com as culturas. O glifosato é absorvido através das folhas, e minimamente através de raízes. Ele inibe uma enzima vegetal envolvida na síntese de três aminoácidos aromáticos: fenilalanina, triptofano e tirosina. Portanto, é eficaz somente em plantas em crescimento ativo e não é eficaz como um herbicida de pré-emergência"
                                    TextWrapping="Wrap" />
                         </StackPanel>
                     </Expander>
@@ -59,9 +70,17 @@
                         <StackPanel Orientation="Vertical"
                                 TextBlock.Foreground="{DynamicResource MaterialDesignBody}"
                                 Margin="24,8,24,16">
-                            <TextBlock Text="Your Content" />
+                            <TextBlock Text="Diazinon" />
                             <TextBlock Opacity=".68"
-                                   Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                                   Text="Um inseticida organofosforado usado para controlar insetos no solo, nas plantas ornamentais e nas culturas de frutas e legumes. "
+                                   TextWrapping="Wrap" />
+                            <Border Background="{DynamicResource MaterialDesignDivider}"
+                                Height="1"
+                                HorizontalAlignment="Stretch"
+                                SnapsToDevicePixels="True" />
+                            <TextBlock Text="Clorpirifós" />
+                            <TextBlock Opacity=".68"
+                                   Text="É um inseticida cristalino da classe dos organofosforados que inibe a transmissão dos receptores do sistema nervoso. É utilizado para controlar vários tipos de insetos, e é conhecido por vários nomes de marca registrada. Não é muito solúvel em água, de maneira que geralmente se mistura com líquidos azeitosos, antes de aplicar-se a plantas ou a animais. Também se pode aplicar em plantas na forma de cápsulas. Não só se utiliza em alguns cultivos de cereais, algodão, frutas (como amêndoas, maçãs e laranjas), legumes e hortaliças, como também nas estufas de plantas ornamentais. É muito eficaz no controle de pragas tais como mosquitos, formigas, moscas e termitas. Nalguns casos é aplicado diretamente sobre ovelhas e galinhas."
                                    TextWrapping="Wrap" />
                         </StackPanel>
                     </Expander>
@@ -75,9 +94,25 @@
                         <StackPanel Orientation="Vertical"
                                 TextBlock.Foreground="{DynamicResource MaterialDesignBody}"
                                 Margin="24,8,24,16">
-                            <TextBlock Text="Your Content" />
+                            <TextBlock Text="Paraquat" />
                             <TextBlock Opacity=".68"
-                                   Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                                   Text="Paraquat, cujo nome comercial é Gramoxone 200, é um viológeno, composto por quartenário do amónio utulizado como herbicida e altamente perigoso para os humanos, caso ingerido. A ingestão de Paraquat é altamente tóxica para seres humanos e outros mamíferos; causa síndrome de transtorno respiratório. Ainda não há antídotos contra o Paraquat"
+                                   TextWrapping="Wrap" />
+                            <Border Background="{DynamicResource MaterialDesignDivider}"
+                                Height="1"
+                                HorizontalAlignment="Stretch"
+                                SnapsToDevicePixels="True" />
+                            <TextBlock Text="Atrazina" />
+                            <TextBlock Opacity=".68"
+                                   Text="A atrazina é um herbicida de tipo triazina, usado em plantações de milho, cana-de-açúcar e sorgo para o controle de ervas daninhas. Estudo publicado em 2010 pela Proceedings of the National Academy of Sciences revelaram que este composto pode mudar o sexo de rãs. A pesquisa recebeu questionamentos da indústria química Syngenta, que é a empresa produtora desta substância que se localiza na Europa na qual é ilegal a produção deste produto "
+                                   TextWrapping="Wrap" />
+                            <Border Background="{DynamicResource MaterialDesignDivider}"
+                                Height="1"
+                                HorizontalAlignment="Stretch"
+                                SnapsToDevicePixels="True" />
+                            <TextBlock Text="Acefato" />
+                            <TextBlock Opacity=".68"
+                                   Text="O accefato é um pesticida. É facilmente absorvido pelas raízes e transloca-se por toda a planta. Inibidor da acetilcolinesterase nas sinapses nervosas. Causa uma transmissão contínua de impulsos nervosos que causa fadiga no inseto e consequentemente a morte"
                                    TextWrapping="Wrap" />
                         </StackPanel>
                     </Expander>

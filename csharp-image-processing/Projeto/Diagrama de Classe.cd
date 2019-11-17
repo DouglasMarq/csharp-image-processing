@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="csharp_image_processing.Views.MainPage">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAAAAAAAAAAAAAAACBAIAAAAAgAAAAAAA=</HashCode>
+      <FileName>Views\MainPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_ctx" />
+    </ShowAsAssociation>
+    <Lollipop Orientation="Bottom" Position="0.158" />
+  </Class>
+  <Class Name="csharp_image_processing.Views.MainWindow">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAABAAAAAAAAAAABCAAAAAAiAAAAQAA=</HashCode>
+      <FileName>Views\MainWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_ctx" />
+    </ShowAsAssociation>
+    <Lollipop Orientation="Bottom" Position="0.117" />
+  </Class>
+  <Class Name="csharp_image_processing.ViewModels.MainPageViewModel">
+    <Position X="0.5" Y="3.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>ABAAABAAQAAAAAAAAAAAAAAAQAAAAAAAEAAAQAAAAAA=</HashCode>
+      <FileName>ViewModels\MainPageViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="csharp_image_processing.ViewModels.MainWindowViewModel">
+    <Position X="6" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAABAAEAAAUAAAAAAAAAAAMAAACAAIABAAAAAAEAAAA=</HashCode>
+      <FileName>ViewModels\MainWindowViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="csharp_image_processing.ViewModels.BaseViewModel" Collapsed="true">
+    <Position X="3.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAIAAAAAAAgAEAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\BaseViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="csharp_image_processing.Model.Entidades.Login">
+    <Position X="10" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABADAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Entidades\Login.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="csharp_image_processing.Model.Database.AccessLogin">
+    <Position X="10" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Database\AccessLogin.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="csharp_image_processing.Model.Database.DBService&lt;T&gt;">
+    <Position X="10" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAACAAAAAgAAAAIAQAAAEAAAAAAgAAAAAAABA=</HashCode>
+      <FileName>Model\Database\DBService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
